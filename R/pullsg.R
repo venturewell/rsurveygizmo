@@ -99,7 +99,7 @@ pullsg <- function(surveyid, api, completes_only=TRUE, verbose=TRUE, var_name_ap
 						  "_ID", lc_qs$id)
 		lc_qs$qtext <- trimws(lc_qs$qtext)
 	} else {
-		lc_qs$qtext <- paste0(substr(gsub("[[:space:]]", ".", lc_qs$qtext), 1, 75))
+		lc_qs$qtext <- paste0(gsub("[[:space:]]", ".", lc_qs$qtext))
 		lc_qs$qtext <- trimws(lc_qs$qtext)
 	}
 
